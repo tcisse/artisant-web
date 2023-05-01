@@ -7,13 +7,13 @@ import {data} from "../data/data.js";
 export default function ProfileCard() {
     const [profile, setProfile] = useState(data)
     return (
-        <div className="pl-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="pl-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {profile.map((item, index) => (
-                <div key={index} className="max-w-md bg-gray-500 rounded-lg shadow-md shadow-emerald-400">
+                <div key={index} className="max-w-sm bg-gray-500 rounded-lg shadow-md shadow-emerald-400">
                     <div className="rounded-full flex items-center justify-center pt-3 mb-3">
                         <Image
                             src={item.profile_url}
-                            className="w-40 h-40 rounded-full"
+                            className="w-32 h-32 rounded-full"
                             width={100}
                             height={100}
                             alt=""
@@ -29,7 +29,8 @@ export default function ProfileCard() {
                             <div className="flex space-x-4">
                                 <div className="flex gap-2">
                                     <BsWhatsapp size={25}/>
-                                    <p className="font-bold text-white">{item.contact_whatsapp}</p>
+                                    <a href={item.whatsapp_url}
+                                       className="font-bold text-white">{item.contact_whatsapp}</a>
                                 </div>
                                 <div className="flex gap-2">
                                     <BiPhoneCall size={25}/>
