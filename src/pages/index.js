@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../components/Header';
-import ProfilCard from '../components/ProfilCard';
+import ProfileCard from '../components/ProfileCard';
 import Footer from '@/components/Footer';
 
 export default function index() {
   return (
     <div>
       <Header/>
-      <ProfilCard/>
+      <ProfileCard/>
       <Footer/>
     </div>
   )
